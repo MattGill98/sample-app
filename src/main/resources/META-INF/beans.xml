@@ -1,0 +1,16 @@
+<beans xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/beans_2_0.xsd"
+    bean-discovery-mode="annotated"
+    version="2.0"></beans><!--
+        bean-discovery-mode is "annotated" by default since CDI 2.0.
+        If the file is created and the version is empty, the default is "all".
+
+        "annotated" means that only classes with bean-defining annotations are scanned (scopes, interceptors and decorators).
+        "all" means that all classes are scanned.
+        "none" means that no classes are scanned.
+
+        if "none", or no beans.xml and a CDI extension is specified, the archive is not a bean archive
+        if beans.xml is empty, or version is 1.1+ and mode is "all", the archive is an explicit archive
+        if no beans.xml and CDI 2.0, or mode is "annotated", the archive is an implicit bean archive
+    -->
